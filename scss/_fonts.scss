@@ -1,0 +1,28 @@
+@mixin font-face($font-family,$url,$weight,$style){
+    @font-face {
+        font-family: '#{$font-family}';
+        src: url('../fonts/#{$url}.woff') format('woff'),
+             url('../fonts/#{$url}.woff2') format('woff2'),
+             url('../fonts/#{$url}.ttf') format('truetype');
+        font-display: swap;
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+// @include font-face($font-family,$url,$weight,$style);
+// 100 - Thin
+// 200 - Extra Light
+// 300 - Light
+// 400 - Normal
+// 500 - Medium
+// 600 - Semi Bold
+// 700 - Bold
+// 800 - Extra Bold
+// 900 - Black 
+// 950 - Extra Black
+
+@include font-face(Lato,Lato-Regular,400,normal);
+@include font-face(Lato,Lato-Light,300,normal);
+@include font-face(Lato,Lato-Bold,700,normal);
+@include font-face(Merriweather,Merriweather-Bold,700,normal);
+@include font-face(Merriweather,Merriweather-Black,900,normal);
